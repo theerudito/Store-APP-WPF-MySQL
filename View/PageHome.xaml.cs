@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using Store.ViewModels;
+using System.Windows;
 using System.Windows.Input;
+
 
 namespace Store.View
 {
@@ -9,6 +11,7 @@ namespace Store.View
         public PageHome()
         {
             InitializeComponent();
+            DataContext = new VMPageHome();
         }
 
         private void MinimixarHome_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -18,27 +21,32 @@ namespace Store.View
 
         private void MaximizarHome_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (this.WindowState == WindowState.Maximized)
+            if (WindowState == WindowState.Maximized)
             {
-                this.WindowState = WindowState.Normal;
+                WindowState = WindowState.Normal;
             }
             else
             {
-                this.WindowState = WindowState.Maximized;
+                WindowState = WindowState.Maximized;
             }
         }
 
-        private void CerrarHome_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void CerrarHome_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }
 
-        private void pageHome_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void pageHome_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
+        }
+
+        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Hola");
         }
     }
 }
