@@ -14,13 +14,9 @@
             <RowDefinition Height="5"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="5"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -39,6 +35,192 @@
                 Text="CONFIGURACION"/>
         </StackPanel>
 
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="3"
+            Background="red">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="180"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="RUC:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    />
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="5"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Empresa:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="7"
+                    Grid.Row="1"
+                    />
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="9"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Propietario:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="11"
+                    Grid.Row="1"
+                    />
+
+
+
+
+
+            </Grid>
+
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="5"
+            Background="blue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="180"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Direccion:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    />
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="5"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Email:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="7"
+                    Grid.Row="1"
+                    />
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="9"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="Telefono:" />
+
+                <TextBox
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Center"
+                    Padding="0,-2,0,0"
+                    Background="{x:Null}"
+                    Height="14"
+                    Grid.Column="11"
+                    Grid.Row="1"
+                    />
+
+
+
+
+
+            </Grid>
+
+        </StackPanel>
 
 
 
