@@ -1,14 +1,199 @@
 ﻿<Page x:Class="Store.View.Reports"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Store.View"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Reports">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="Reports" Height="570">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Grid Margin="0,0,0,85">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid
+                Grid.Row="1"
+                Background="black"
+                Grid.Column="0">
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="REPORTES"
+                    FontSize="20"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    />
+
+            </Grid>
+
+            <StackPanel
+                Grid.Row="3"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Fecha Inicial"
+                        Foreground="white"
+                        FontWeight="Bold"
+                        />
+
+                    <TextBlock
+                        Text="17/14/2022"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Foreground="white"
+                        FontWeight="Bold"
+                        />
+
+
+                    <TextBlock
+                        Text="Fecha Final"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="5"
+                        Foreground="white"
+                        FontWeight="Bold"
+                        />
+
+                    <TextBlock
+                        Text="17/14/2022"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="7"
+                        Foreground="white"
+                        FontWeight="Bold"
+                        />
+
+
+
+
+                    <Button
+                        BorderThickness="0"
+                        Content="BUSCAR"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="Monserrat"
+                        FontStyle="Normal"
+                        FontWeight="Bold"
+                        Cursor="Hand"
+                        Grid.Column="9"
+                        Grid.Row="0"
+                        >
+                        <Button.Style >
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FF110B"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#931A20"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    CornerRadius="5"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                </Grid>
+
+            </StackPanel>
+
+            <ListView
+                Background="black"
+                Grid.Row="5"
+                Grid.Column="0"
+                />
+
+            <StackPanel
+                Grid.Row="7"
+                Grid.Column="0" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Foreground="White"
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        FontSize="30"
+                        VerticalAlignment="Center"
+                        Text="TOTAL:"/>
+                    <TextBlock
+                        Foreground="White"
+                        Grid.Row="0"
+                        Grid.Column="5"
+                        FontSize="30"
+                        VerticalAlignment="Center"
+                        Text="200000"/>
+                    <TextBlock />
+                </Grid>
+            </StackPanel>
+
+        </Grid>
+    </StackPanel>
 </Page>

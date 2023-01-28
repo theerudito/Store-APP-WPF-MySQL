@@ -110,12 +110,17 @@
                     Grid.Column="5"
                     />
 
-                <Button
+
+                <Image
+                    Source="/pintures/lupa.png"
+
+                    Cursor="Hand"
                     Grid.Column="6"
                     Height="20"
                     Width="20"
-                    HorizontalAlignment="Center"
-                    />
+                    HorizontalAlignment="Center" Margin="0,5,0,15"
+                    >
+                </Image>
 
 
 
@@ -409,18 +414,25 @@
                     Height="20"
                     />
 
-                <Button
+
+
+                <Image
+                    Source="/pintures/sum.png"
+                    Cursor="Hand"
                     Grid.Column="13"
                     Height="20"
                     Width="20"
-                    HorizontalAlignment="Center" Margin="0,4,0,16"
-                    />
+                    HorizontalAlignment="Center"
+                    Margin="0,2,0,18"
+                    >
+                </Image>
+
             </Grid>
 
         </Grid>
 
         <ListView
-            Background="OldLace"
+            Background="black"
             Margin="-10,-17,10,-210"
             />
 

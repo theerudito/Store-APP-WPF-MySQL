@@ -50,7 +50,7 @@
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
                     <GradientStop Color="#144AA8" Offset="0.0" />
-                    <GradientStop Color="#384B6B" Offset="0.75" />
+                    <GradientStop Color="black" Offset="0.75" />
                 </LinearGradientBrush>
             </Border.Background>
 
@@ -126,7 +126,7 @@
                             CornerRadius="0,0,0,10"
                             Grid.Row="0"
                             Grid.Column="0"
-                            Background="orange" Margin="0,0,0,-533">
+                            Background="black" Margin="0,0,0,-533">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="20"/>

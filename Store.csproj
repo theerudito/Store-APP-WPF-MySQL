@@ -125,17 +125,11 @@
     <Compile Include="View\Cart.xaml.cs">
       <DependentUpon>Cart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Client.xaml.cs">
-      <DependentUpon>Client.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Configuracion.xaml.cs">
       <DependentUpon>Configuracion.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DetailsCart.xaml.cs">
       <DependentUpon>DetailsCart.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\gia.xaml.cs">
-      <DependentUpon>gia.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -170,19 +164,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Client.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Configuracion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DetailsCart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\gia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -256,6 +242,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pintures\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintures\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintures\sum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintures\res.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

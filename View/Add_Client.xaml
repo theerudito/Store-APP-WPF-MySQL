@@ -247,48 +247,130 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="85"/>
                         <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock
-                        Text="Guardar"
-                        Background="blue"
-                        Foreground="Aqua"
-                        FontSize="14"
+
+                    <Button
+                        BorderThickness="0"
+                        Content="GUARDAR"
+                        Foreground="White"
+                        FontSize="12"
                         FontFamily="Monserrat"
-                        Margin="5,2,0,2"
+                        FontStyle="Normal"
+                        FontWeight="Bold"
+                        Cursor="Hand"
                         Grid.Column="1"
-                        Grid.Row="0"
-                        HorizontalAlignment="Center"
-                        />
+                        Grid.Row="1"
+                        >
+                        <Button.Style >
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#2255DB"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#1C90ED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
 
-                    <TextBlock
-                        Background="orange"
-                        Text="Actualizar"
-                        Foreground="Aqua"
-                        FontSize="14"
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    CornerRadius="5"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button
+                        BorderThickness="0"
+                        Content="ACTUALIZAR"
+                        Foreground="White"
+                        FontSize="12"
                         FontFamily="Monserrat"
-                        Margin="5,2,0,2"
+                        FontStyle="Normal"
+                        FontWeight="Bold"
+                        Cursor="Hand"
                         Grid.Column="3"
-                        Grid.Row="0"
-                        HorizontalAlignment="Center"
-                        />
+                        Grid.Row="1"
+                        >
+                        <Button.Style >
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="OrangeRed"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="orange"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
 
-                    <TextBlock
-                        Background="red"
-                        Text="Borrar"
-                        Foreground="Aqua"
-                        FontSize="14"
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    CornerRadius="5"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button
+                        BorderThickness="0"
+                        Content="ELIMINAR"
+                        Foreground="White"
+                        FontSize="12"
                         FontFamily="Monserrat"
-                        Margin="5,2,0,2"
+                        FontStyle="Normal"
+                        FontWeight="Bold"
+                        Cursor="Hand"
                         Grid.Column="5"
-                        Grid.Row="0"
-                        HorizontalAlignment="Center"
-                        />
+                        Grid.Row="1"
+                        >
+                        <Button.Style >
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FF110B"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#931A20"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    CornerRadius="5"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
                 </Grid>
 
             </StackPanel>
@@ -318,7 +400,6 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Text="Buscar:"
-                        Background="blue"
                         Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
@@ -340,10 +421,14 @@
                         Grid.Row="1"
                         />
 
-                    <Button
+                    <Image
+                        Source="/pintures/lupa.png"
+
+                        Cursor="Hand"
                         Grid.Column="5"
                         Grid.Row="1"
-                        />
+                        >
+                    </Image>
                 </Grid>
 
             </StackPanel>
@@ -351,7 +436,9 @@
             <StackPanel
                 Grid.Row="2"
                 Grid.Column="1">
-                <ListView Height="210"/>
+                <ListView 
+                    Height="210" 
+                    Background="black"/>
 
             </StackPanel>
         </Grid>
