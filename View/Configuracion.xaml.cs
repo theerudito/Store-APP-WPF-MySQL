@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Store.View
 {
     /// <summary>
-    /// Interaction logic for Cart.xaml
+    /// Interaction logic for Configuracion.xaml
     /// </summary>
-    public partial class Cart : Page
+    public partial class Configuracion : Page
     {
-        public Cart()
+        public Configuracion()
         {
             InitializeComponent();
         }

@@ -1,8 +1,7 @@
-﻿
-using GalaSoft.MvvmLight.Command;
+﻿using GalaSoft.MvvmLight.Command;
 using Store.View;
 using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
@@ -10,43 +9,54 @@ namespace Store.ViewModels
 {
     public class VMPageHome : BaseViewModel
     {
+        private Frame myFrame;
+
         public VMPageHome()
         {
 
         }
 
-        public async Task GoFactura()
+        public VMPageHome(Frame myFrame)
         {
-            Cart cart = new Cart();
-            cart.Show();
+            this.myFrame = myFrame;
         }
 
-        public async Task GoClient()
+        public void GoFactura()
         {
-            MessageBox.Show("Client");
+            myFrame.NavigationService.Navigate(new Cart());
         }
 
-        public async Task GoProduct()
+        public void Go_Add_Client()
         {
-            MessageBox.Show("Client");
+            myFrame.NavigationService.Navigate(new Add_Client());
         }
 
-        public async Task GoReport()
+        public void Go_Add_Product()
         {
-            MessageBox.Show("report");
+            myFrame.NavigationService.Navigate(new Add_Product());
         }
 
-        public async Task GoConfiguration()
+        public void GoReport()
         {
-            MessageBox.Show("configuration");
+            myFrame.NavigationService.Navigate(new Reports());
         }
 
+        public void GoConfiguration()
+        {
+            myFrame.NavigationService.Navigate(new Configuracion());
+        }
 
-        public ICommand GoFacturaCommand => new RelayCommand(async () => await GoFactura());
-        public ICommand GoClientCommand => new RelayCommand(async () => await GoClient());
-        public ICommand GoProductCommand => new RelayCommand(async () => await GoProduct());
-        public ICommand GoReportsCommand => new RelayCommand(async () => await GoReport());
-        public ICommand GoConfigurationCommand => new RelayCommand(async () => await GoConfiguration());
+        public void GoDetailsCart()
+        {
+            myFrame.NavigationService.Navigate(new DetailsCart());
+        }
+
+        public ICommand GoFacturaCommand => new RelayCommand(GoFactura);
+        public ICommand GoClientCommand => new RelayCommand(Go_Add_Client);
+        public ICommand GoProductCommand => new RelayCommand(Go_Add_Product);
+        public ICommand GoReportsCommand => new RelayCommand(GoReport);
+        public ICommand GoConfigurationCommand => new RelayCommand(GoConfiguration);
+        public ICommand GoDetailCartCommand => new RelayCommand(GoDetailsCart);
 
     }
 }

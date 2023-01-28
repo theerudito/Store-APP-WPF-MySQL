@@ -1,65 +1,549 @@
-﻿<Window x:Class="Store.View.Cart"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Store.View"
-        mc:Ignorable="d"
-        Title="Cart" Height="450" Width="800">
-    <Grid>
-        <GroupBox Header="Factura" Margin="10,10,10,10"/>
+﻿<Page x:Class="Store.View.Cart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Store.View"
+      mc:Ignorable="d"
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Cart">
+
+    <StackPanel Background="Transparent" Margin="10,0,10,10" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
 
 
-        <Button x:Name="btnSearchCI" Background="#384B6B" Foreground="White" BorderBrush="#384B6B" Content="CI" Margin="455,94,313,319" />
-        <TextBox x:Name="TextCI" Text="1721457495"  Margin="347,94,345,0" VerticalAlignment="Top" Height="21" />
-        <Label Content="CI:"  Margin="316,90,426,0" VerticalAlignment="Top" Height="26" Width="58" />
-
-        <Label Content="Fecha:" HorizontalAlignment="Left" Margin="39,58,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
-        <Label x:Name="TextDate" Content="17/01/2021"  Margin="77,59,646,0" VerticalAlignment="Top" Height="26" Width="77"/>
-        <Label Content="Hour:" HorizontalAlignment="Left" Margin="153,58,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
-        <Label x:Name="TextHour" Content="11:21" HorizontalAlignment="Left" Margin="186,58,0,0" VerticalAlignment="Top" Height="26" Width="45"/>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="39,89,0,0" VerticalAlignment="Top" Height="26" Width="58" />
-        <TextBox x:Name="TextFirstClient" Text="Jorge" Margin="115,95,510,0" VerticalAlignment="Top" Height="20" />
-        <Label Content="Apellido:"  Margin="42,121,703,0" VerticalAlignment="Top" Height="26" />
-        <TextBox x:Name="TextLastNameClient" Text="Loor"  Margin="114,125,510,0" VerticalAlignment="Top" Height="21" />
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="42,153,0,0" VerticalAlignment="Top" Height="26" Width="58" />
-        <TextBox x:Name="TextEmailClient" Text="erudito.tv@gmail.com" HorizontalAlignment="Left" Margin="115,155,0,0" VerticalAlignment="Top" Height="20" Width="175" />
-        <Label Content="Phone:"  Margin="315,120,427,0" VerticalAlignment="Top" Height="26" Width="58" />
-        <TextBox x:Name="TextPhoneClient" Text="0960806054"  Margin="376,125,336,0" VerticalAlignment="Top" Height="17" />
-        <Label Content="Direccion:" HorizontalAlignment="Left" Margin="316,151,0,0" VerticalAlignment="Top" Height="25" Width="65" />
-        <TextBox x:Name="TextDirectionClient" Text="Libertad del Toachi" HorizontalAlignment="Left" Margin="381,153,0,0" VerticalAlignment="Top" Height="22" Width="310" />
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
 
 
-        <Label Content="#Factura:" HorizontalAlignment="Left" Margin="511,92,0,0" VerticalAlignment="Top" Height="26" Width="62" RenderTransformOrigin="-0.065,0.309"/>
-        <Label x:Name="TextNumDocument" Content="123456"  Margin="575,92,140,0" VerticalAlignment="Top" Height="26"/>
-        <Label Content="Serie1:" HorizontalAlignment="Left" Margin="513,115,0,0" VerticalAlignment="Top" Height="26" Width="43"/>
-        <Label x:Name="TextSerie1" Content="001" HorizontalAlignment="Left" Margin="561,115,0,0" VerticalAlignment="Top" Height="26" Width="45"/>
-        <Label Content="Serie2:" HorizontalAlignment="Left" Margin="606,115,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
-        <Label x:Name="TextSerie2" Content="002" HorizontalAlignment="Left" Margin="659,115,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
-        <Label Content="Documento:" HorizontalAlignment="Left" Margin="642,91,0,0" VerticalAlignment="Top" Height="26" Width="83"/>
-        <Label x:Name="TextDocument" Content="Factura" HorizontalAlignment="Left" Margin="715,91,0,0" VerticalAlignment="Top" Height="26" Width="75"/>
 
-        <DataGrid Margin="10,194,280,10" />
+                <TextBlock
+                    Text="AÑADIR CLIENTE"
+                    Foreground="Aquamarine"
+                    FontSize="20"
+                    FontFamily="Monserrat"
+                    Margin="76,-42,474,437"
+                    Height="20"
+                    />
 
-        <GroupBox Margin="550,189,30,80" Header="Totales" >
-            <Grid Height="175">
-                <Label Content="Subtotal:"  Margin="10,6,111,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.5,0.5" />
-                <Label x:Name="TextSubtotal" Content="11.50"  Margin="158,7,10,0" VerticalAlignment="Top" Height="26" />
-                <Label Content="Subtotal0:"  Margin="10,28,119,0" VerticalAlignment="Top" Height="26" />
-                <Label x:Name="TextSubtotal0" Content="11.50"  Margin="158,29,10,0" VerticalAlignment="Top" Height="26" />
-                <Label Content="Subtotal12:"  Margin="10,50,131,0" VerticalAlignment="Top" Height="26" />
-                <Label x:Name="TextSubtotal12" Content="11.50"  Margin="158,50,10,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="2.476,0.482" />
-                <Label Content="Descuento:"  Margin="10,0,131,0" VerticalAlignment="Center" Height="26" />
-                <Label x:Name="TextDescuento" Content="11.50"  Margin="158,0,10,0" VerticalAlignment="Center" Height="26" RenderTransformOrigin="2.476,0.482" />
-                <Label Content="Iva:"  Margin="11,93,169,0" VerticalAlignment="Top" Height="26" />
-                <Label x:Name="TextIva" Content="11.50"  Margin="158,94,10,0" VerticalAlignment="Top" Height="26" />
-                <Label Content="TOTAL:" FontSize="18"  Margin="10,112,110,0" VerticalAlignment="Top" Height="31" />
-                <Label x:Name="TextTotal" FontSize="18" Content="11.50"  Margin="144,112,10,0" VerticalAlignment="Top" Height="32" />
+                <TextBlock
+                    Text="Fecha:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="0,12,5,8"
+                    Grid.Column="0"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBlock
+                    Text="27/01/2023"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="8,12,3,8"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="Hora:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="5,12,5,8"
+                    Grid.Column="2"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBlock
+                    Text="11:50"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="0,12,0,8"
+                    Grid.Column="3"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBlock
+                    Text="CI:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="5,12,5,8"
+                    Grid.Column="4"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,5,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    Height="20"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="5"
+                    />
+
+                <Button
+                    Grid.Column="6"
+                    Height="20"
+                    Width="20"
+                    HorizontalAlignment="Center"
+                    />
+
+
+
 
             </Grid>
-        </GroupBox>
-        <Button x:Name="btnPagar" Background="#144AA8" Foreground="White" BorderBrush="#144AA8" Content="PAGAR" HorizontalAlignment="Left" Margin="591,384,0,0" VerticalAlignment="Top" Height="27" Width="136" />
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Text="Nombre:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="0"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="1"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="Apellido:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="2"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="3"
+                    Height="20"
+                    />
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Text="Direccion:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="0"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="1"
+                    Height="20"
+                    />
+                <TextBlock
+                    Text="Email:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="2"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="3"
+                    Height="20"
+                    />
+                <TextBlock
+                    Text="Phone:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="4"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="5"
+                    Height="20"
+                    />
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Text="COD:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="0"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="1"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="DETALLE:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="2"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="3"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="CANT:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="4"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="5"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="DESC:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="6"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
 
 
-    </Grid>
-</Window>
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="7"
+                    Height="20"
+                    />
+
+                <TextBlock
+                    Text="P_UNITARY:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="8"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="9"
+                    Height="20"
+                    />
+                <TextBlock
+                    Text="P_TOTAL:"
+                    Foreground="Aquamarine"
+                    FontSize="14"
+                    FontFamily="Monserrat"
+                    Margin="6,7,3,13"
+                    Grid.Column="10"
+                    Height="20"
+                    HorizontalAlignment="Center"
+                    />
+
+                <TextBox
+                    Margin="2,1,0,0"
+                    Foreground="white"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Top"
+                    Padding="0,5,0,0"
+                    Background="{x:Null}"
+                    Grid.Column="11"
+                    Height="20"
+                    />
+
+                <Button
+                    Grid.Column="13"
+                    Height="20"
+                    Width="20"
+                    HorizontalAlignment="Center" Margin="0,4,0,16"
+                    />
+            </Grid>
+
+        </Grid>
+
+        <ListView
+            Background="OldLace"
+            Margin="-10,-17,10,-210"
+            />
+
+
+        <Grid>
+            <TextBlock
+                Text="SUBTOTAL:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="10,225,0,-225"
+                Grid.Column="0"
+                Grid.Row="0"
+                Height="20"
+                HorizontalAlignment="Left"
+                Width="69"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Height="20" Margin="84,225,600,-225"
+                />
+
+
+            <TextBlock
+                Text="SUBTOTAL0:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="163,225,0,-225"
+                Height="20"
+                HorizontalAlignment="Left"
+                Width="76"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="245,225,0,-225"
+                Height="20"
+                HorizontalAlignment="Left"
+                Width="70"
+                />
+
+            <TextBlock
+                Text="SUBTOTAL12:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="305,225,0,-225"
+                Height="20"
+                HorizontalAlignment="Left"
+                Width="108"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="391,225,0,-225"
+                Height="20"
+                HorizontalAlignment="Left"
+                Width="69"
+                />
+            <TextBlock
+                Text="DESCUENTO:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="10,260,0,-260"
+                Height="20"
+                HorizontalAlignment="Left" Width="93"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="108,260,0,-260"
+                Height="20"
+                HorizontalAlignment="Left" Width="70"
+                />
+
+            <TextBlock
+                Text="IVA:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="161,257,0,-257"
+                Height="20"
+                HorizontalAlignment="Left" Width="69"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="212,257,0,-257"
+                Height="20"
+                HorizontalAlignment="Left" Width="68"
+                />
+            <TextBlock
+                Text="TOTAL:"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="303,256,0,-256"
+                Height="20"
+                HorizontalAlignment="Left" Width="69"
+                />
+            <TextBlock
+                Text="18:25"
+                Foreground="Aquamarine"
+                FontSize="14"
+                FontFamily="Monserrat"
+                Margin="391,254,0,-254"
+                Height="20"
+                HorizontalAlignment="Left" Width="68"
+                />
+        </Grid>
+
+    </StackPanel>
+</Page>

@@ -13,6 +13,7 @@
         AllowsTransparency="True"
         x:Name="pageHome"
         MouseDown="pageHome_MouseDown"
+
         >
 
     <!--Title="PageHome" Height="600" Width="1000"
@@ -23,6 +24,8 @@
     AllowsTransparency="True"
     x:Name="pageHome"
     MouseDown="pageHome_MouseDown"-->
+    <!--ImageSource="/pintures/principal.jpg"-->
+
 
 
     <Border
@@ -33,35 +36,39 @@
                 Stretch="Fill"
                 />
         </Border.Background>
-
         <Border CornerRadius="10"
                 BorderThickness="2"
                 Opacity="0.7"
                 >
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
-                    <GradientStop Color="#1b1448" Offset="0.0" />
-                    <GradientStop Color="blue" Offset="0.75" />
-                    <GradientStop Color="Yellow" Offset="0.80" />
+                    <GradientStop Color="#0C85E2" Offset="0.0" />
+                    <GradientStop Color="white" Offset="0.75" />
+                    <GradientStop Color="YellowGreen" Offset="0.80" />
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
-                    <GradientStop Color="#060531" Offset="0.0" />
-                    <GradientStop Color="#1b1448" Offset="0.75" />
+                    <GradientStop Color="#144AA8" Offset="0.0" />
+                    <GradientStop Color="#384B6B" Offset="0.75" />
                 </LinearGradientBrush>
             </Border.Background>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+            <StackPanel>
+
                 <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition  Width="*"/>
+                        <ColumnDefinition  Width="5"/>
                         <ColumnDefinition  Width="25"/>
+                        <ColumnDefinition  Width="5"/>
                         <ColumnDefinition  Width="25"/>
+                        <ColumnDefinition  Width="5"/>
                         <ColumnDefinition  Width="25"/>
                         <ColumnDefinition  Width="5"/>
                     </Grid.ColumnDefinitions>
@@ -79,18 +86,18 @@
                         Cursor="Hand"
                         Name="MinimixarHome"
                         MouseDown="MinimixarHome_MouseDown"
-                        Height="20" Source="/pintures/minimizar.png"
-                        Grid.Column="0"
-                        Margin="896,7,15,3"
-                        Grid.ColumnSpan="2"/>
+                        Source="/pintures/minimizar.png"
+                        Grid.Column="2"
+                        Height="20"
+                        />
                     <Image
                         Cursor="Hand"
                         Name="MaximizarHome"
                         MouseDown="MaximizarHome_MouseDown"
                         Height="20"
                         Source="/pintures/maximizar.png"
-                        Grid.Column="1" Margin="19,2,6,-2"
-                        Grid.ColumnSpan="2"
+                        Grid.Column="4"
+
                         />
                     <Image
                         Cursor="Hand"
@@ -98,319 +105,367 @@
                         MouseDown="CerrarHome_MouseDown"
                         Height="20"
                         Source="/pintures/cerrar.png"
-                        Grid.Column="3"
-                        Margin="0,2,0,-2"/>
+                        Grid.Column="6"
+
+                        />
                 </Grid>
 
 
-
-                <Border CornerRadius="0,0,0,10"
-                        Background="#59413B"
-                        Margin="0,0,760,0"
-                        Grid.Row="1">
-
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
                     <Grid>
-                        <Button
-                            BorderThickness="0"
-                            Content="FACTURAR"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,45,0,496"
-                            Command="{Binding GoFacturaCommand}"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="200"/>
+                            <ColumnDefinition  Width="5"/>
+                            <ColumnDefinition  Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border
+                            CornerRadius="0,0,0,10"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="orange" Margin="0,0,0,-533">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="80"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
+                                    <ColumnDefinition Width="*"/>
 
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                </Grid.ColumnDefinitions>
 
-                        </Button>
+                                <Image
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    Source="/pintures/avatar.png"
+                                    />
 
-                        <Button
-                            BorderThickness="0"
-                            Content="CLIENTES"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,138,0,403"
-                            Command="{Binding GoClientCommand}"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
+                                <Button
+                                    Height="40"
+                                    Width="180"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    BorderThickness="0"
+                                    Content="FACTURAR"
+                                    Foreground="White"
+                                    FontSize="12"
+                                    FontFamily="Monserrat"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"
+                                    Command="{Binding GoFacturaCommand}"
+                                    >
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Style >
+                                        <Style
+                                            TargetType="Button">
+                                            <Setter
+                                                Property="Background"
+                                                Value="#303E47"/>
+                                            <Style.Triggers>
+                                                <Trigger
+                                                    Property="IsMouseOver"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="Background"
+                                                        Value="#384B6B"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
+                                    <Button.Template>
+                                        <ControlTemplate
+                                            TargetType="Button">
+                                            <Border
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}"
+                                                >
+                                                <ContentPresenter
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                </Button>
 
-                        </Button>
+                                <Button
+                                    Height="40"
+                                    Width="180"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    BorderThickness="0"
+                                    Content="PRODUCTOS"
+                                    Foreground="White"
+                                    FontSize="12"
+                                    FontFamily="Monserrat"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"
+                                    Command="{Binding GoProductCommand}"
+                                    >
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Style >
+                                        <Style
+                                            TargetType="Button">
+                                            <Setter
+                                                Property="Background"
+                                                Value="#303E47"/>
+                                            <Style.Triggers>
+                                                <Trigger
+                                                    Property="IsMouseOver"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="Background"
+                                                        Value="#384B6B"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
 
-                        <Button
-                            BorderThickness="0"
-                            Content="PRODUCTOS"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,229,0,312"
-                            HorizontalAlignment="Center"
-                            Width="236"
-                            Command="{Binding GoProductCommand}"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
+                                    <Button.Template>
+                                        <ControlTemplate
+                                            TargetType="Button">
+                                            <Border
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}"
+                                                >
+                                                <ContentPresenter
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
+                                </Button>
 
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                <Button
+                                    Height="40"
+                                    Width="180"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="7"
+                                    Grid.Column="1"
+                                    BorderThickness="0"
+                                    Content="CLIENTES"
+                                    Foreground="White"
+                                    FontSize="12"
+                                    FontFamily="Monserrat"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"
+                                    Command="{Binding GoClientCommand}"
+                                    >
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Style >
+                                        <Style
+                                            TargetType="Button">
+                                            <Setter
+                                                Property="Background"
+                                                Value="#303E47"/>
+                                            <Style.Triggers>
+                                                <Trigger
+                                                    Property="IsMouseOver"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="Background"
+                                                        Value="#384B6B"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
 
-                        </Button>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}"
+                                                >
+                                                <ContentPresenter
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                        <Button
-                            BorderThickness="0"
-                            Content="REPORTES"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,316,0,225"
-                            HorizontalAlignment="Center"
-                            Width="236"
-                            Command="{Binding GoReportsCommand}"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
+                                </Button>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
+                                <Button
+                                    Height="40"
+                                    Width="180"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="9"
+                                    Grid.Column="1"
+                                    BorderThickness="0"
+                                    Content="REPORTES"
+                                    Foreground="White"
+                                    FontSize="12"
+                                    FontFamily="Monserrat"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"
+                                    Command="{Binding GoReportsCommand}"
+                                    >
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Style >
+                                        <Style
+                                            TargetType="Button">
+                                            <Setter
+                                                Property="Background"
+                                                Value="#303E47"/>
+                                            <Style.Triggers>
+                                                <Trigger
+                                                    Property="IsMouseOver"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="Background"
+                                                        Value="#384B6B"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
 
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                    <Button.Template>
+                                        <ControlTemplate
+                                            TargetType="Button">
+                                            <Border
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}"
+                                                >
+                                                <ContentPresenter
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                        </Button>
+                                </Button>
 
-                        <Button
-                            BorderThickness="0"
-                            Content="CONFIGURACION"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,405,0,136"
-                            Command="{Binding GoConfigurationCommand}"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
+                                <Button
+                                    Height="40"
+                                    Width="180"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="11"
+                                    Grid.Column="1"
+                                    BorderThickness="0"
+                                    Content="CONFIGURACION"
+                                    Foreground="White"
+                                    FontSize="12"
+                                    FontFamily="Monserrat"
+                                    FontStyle="Normal"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"
+                                    Command="{Binding GoConfigurationCommand}"
+                                    >
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1"/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Style >
+                                        <Style
+                                            TargetType="Button">
+                                            <Setter
+                                                Property="Background"
+                                                Value="#303E47"/>
+                                            <Style.Triggers>
+                                                <Trigger
+                                                    Property="IsMouseOver"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="Background"
+                                                        Value="#384B6B"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
 
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
+                                    <Button.Template>
+                                        <ControlTemplate
+                                            TargetType="Button">
+                                            <Border
+                                                CornerRadius="5"
 
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                                                Background="{TemplateBinding Background}"
+                                                >
+                                                <ContentPresenter
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
 
-                        </Button>
+                                </Button>
 
-                        <Button
-                            BorderThickness="0"
-                            Content="CLIENTES"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Monserrat"
-                            FontStyle="Normal"
-                            FontWeight="Bold"
-                            Cursor="Hand"
-                            RenderTransformOrigin="0.5,0.5"
-                            Margin="0,497,0,44"
-                            >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX="1"/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Style >
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="#303E47"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#384B6B"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border
-
-                                        Background="{TemplateBinding Background}"
-                                        >
-                                        <ContentPresenter
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-
-                        </Button>
+                            </Grid>
+                        </Border>
+                        <Border
+                            CornerRadius="0,0,10,0"
+                            Grid.Column="2"
+                            Margin="0,0,0,-533">
+                            <Frame
+                                x:Name="myFrame"
+                                NavigationUIVisibility="Hidden"/>
+                        </Border>
                     </Grid>
-
-
-
-
-                </Border>
-
-                <Frame Content="Frame" Grid.Row="1" Margin="236,0,0,0"/>
-
-
-            </Grid>
+                </Grid>
+            </StackPanel>
         </Border>
     </Border>
 

@@ -10,12 +10,14 @@ namespace Store.View
     {
         public PageHome()
         {
+
             InitializeComponent();
-            DataContext = new VMPageHome();
+            DataContext = new VMPageHome(myFrame);
         }
 
         private void MinimixarHome_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
+
             this.WindowState = WindowState.Minimized;
         }
 
@@ -42,11 +44,6 @@ namespace Store.View
             {
                 DragMove();
             }
-        }
-
-        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Hola");
         }
     }
 }

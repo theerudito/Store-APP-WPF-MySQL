@@ -113,17 +113,26 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\VMPageHome.cs" />
-    <Compile Include="View\AddClient.xaml.cs">
-      <DependentUpon>AddClient.xaml</DependentUpon>
+    <Compile Include="View\Add_Client.xaml.cs">
+      <DependentUpon>Add_Client.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddProduct.xaml.cs">
-      <DependentUpon>AddProduct.xaml</DependentUpon>
+    <Compile Include="View\Add_Product.xaml.cs">
+      <DependentUpon>Add_Product.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Auth.xaml.cs">
       <DependentUpon>Auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Cart.xaml.cs">
       <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client.xaml.cs">
+      <DependentUpon>Client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Configuracion.xaml.cs">
+      <DependentUpon>Configuracion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetailsCart.xaml.cs">
+      <DependentUpon>DetailsCart.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\gia.xaml.cs">
       <DependentUpon>gia.xaml</DependentUpon>
@@ -142,11 +151,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataBase\MySQLConnection.cs" />
-    <Page Include="View\AddClient.xaml">
+    <Compile Include="View\Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Add_Client.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddProduct.xaml">
+    <Page Include="View\Add_Product.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,6 +167,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Configuracion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetailsCart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,6 +250,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pintures\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintures\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintures\client.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

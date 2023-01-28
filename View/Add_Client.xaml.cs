@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Store.View
 {
     /// <summary>
-    /// Interaction logic for AddClient.xaml
+    /// Interaction logic for Add_Client.xaml
     /// </summary>
-    public partial class AddClient : Window
+    public partial class Add_Client : Page
     {
-        public AddClient()
+        public Add_Client()
         {
             InitializeComponent();
         }
