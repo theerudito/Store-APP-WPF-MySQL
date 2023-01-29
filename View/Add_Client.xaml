@@ -33,10 +33,10 @@
                 <TextBlock
                     Text="CLIENTES"
                     Foreground="Aqua"
-                    FontSize="14"
+                    FontSize="18"
                     FontFamily="Monserrat"
                     VerticalAlignment="Center"
-                    Margin="5,2,0,0"
+                    Margin="5,0,0,0"
 
                     />
             </StackPanel>

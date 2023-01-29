@@ -9,514 +9,429 @@
       Title="Configuracion">
 
 
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="20"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <StackPanel>
         <StackPanel
             Grid.Column="0"
             Grid.Row="1"
             Background="black">
             <TextBlock
                 Foreground="Aqua"
-                FontSize="20"
+                FontSize="18"
                 FontFamily="Monserrat"
                 HorizontalAlignment="Left"
-                Margin="10,0,0,0"
+                Margin="10,2,0,0"
                 Text="CONFIGURACION"/>
         </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="3"
-            >
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="180"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="180"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="RUC:" />
 
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
 
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="5"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Empresa:" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
 
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="7"
-                    Grid.Row="1"
-                    />
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="RUC:" />
 
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="9"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Propietario:" />
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="1"
+                />
 
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="11"
-                    Grid.Row="1"
-                    />
-            </Grid>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="5"
-            >
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="90"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="160"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="180"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Direccion:" />
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Empresa:" />
 
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    />
-
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="5"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Email:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="7"
-                    Grid.Row="1"
-                    />
-
-                <TextBlock
-                    Grid.Row="1"
-                    Grid.Column="9"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Telefono:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="11"
-                    Grid.Row="1"
-                    />
-            </Grid>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="7"
-            >
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="90"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="180"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock
-                    Grid.Column="1"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="#Document:" Grid.ColumnSpan="3" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="3" Grid.ColumnSpan="2"
-                    />
-
-                <TextBlock
-                    Grid.Column="6"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="Serie1:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="8"
-                    />
-
-                <TextBlock
-                    Grid.Column="10"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="Serie2:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="12"
-                    />
-            </Grid>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="9"
-            >
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="90"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock
-                    Grid.Column="1"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Text="Document:" Grid.ColumnSpan="3" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="3" Grid.ColumnSpan="2"
-                    />
-
-                <TextBlock
-                    Grid.Column="5"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="DB:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="7"
-                    />
-
-                <TextBlock
-                    Grid.Column="9"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="IVA:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="11"
-                    />
-
-                <TextBlock
-                    Grid.Column="13"
-                    Foreground="Aqua"
-                    FontSize="14"
-                    FontFamily="Monserrat"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="Moneda:" />
-
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="15"
-                    />
-            </Grid>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="11">
-
-            <Grid>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="80"/>
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="3"
+                />
 
 
-                </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Row="5"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Propietario:" />
 
-                <Button
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    BorderThickness="0"
-                    Content="GUARDAR COMPANY"
-                    Foreground="White"
-                    FontSize="12"
-                    FontFamily="Monserrat"
-                    FontStyle="Normal"
-                    FontWeight="Bold"
-                    Cursor="Hand"
-                    HorizontalAlignment="Center"
-                    Margin="0,5,0,0"
-                    Height="30"
-                    Width="140"
-                    >
-                    <Button.Style >
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="#1C90ED"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#23A8F2"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="5"
+                />
 
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border
-                                CornerRadius="5"
-                                Background="{TemplateBinding Background}"
-                                >
-                                <ContentPresenter
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
 
-                </Button>
-                <TextBox
-                    Foreground="white"
-                    BorderThickness="0,0,0,1"
-                    VerticalAlignment="Center"
-                    Padding="0,-2,0,0"
-                    Background="{x:Null}"
-                    Height="14"
-                    Grid.Column="3"
-                    Grid.Row="1"
-                    />
+            <TextBlock
+                Grid.Row="7"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Direccion:" />
 
-                <Button
-                    BorderThickness="0"
-                    Content="CODIGO"
-                    Foreground="White"
-                    FontSize="12"
-                    FontFamily="Monserrat"
-                    FontStyle="Normal"
-                    FontWeight="Bold"
-                    Cursor="Hand"
-                    Grid.Column="5"
-                    Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    Margin="0,5,0,0"
-                    Height="30"
-                    Width="70"
-                    >
-                    <Button.Style >
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="#1C90ED"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="Orange"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="7"
+                />
 
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border
-                                CornerRadius="5"
-                                Background="{TemplateBinding Background}"
-                                >
-                                <ContentPresenter
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Grid>
-        </StackPanel>
-        <StackPanel
-            Grid.Column="0"
-            Grid.Row="13"
-            Background="black">
-        </StackPanel>
-    </Grid>
+            <TextBlock
+                Grid.Row="9"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Email:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="9"
+                />
+
+            <TextBlock
+                Grid.Row="11"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="#NumeroDoc:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="11"
+                />
+
+
+            <TextBlock
+                Grid.Row="13"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Serie1:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="13"
+                />
+            <TextBlock
+                Grid.Row="15"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Serie2:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="15"
+                />
+
+            <TextBlock
+                Grid.Row="17"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="DB:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="17"
+                />
+
+            <TextBlock
+                Grid.Row="19"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Documento:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="19"
+                />
+
+            <TextBlock
+                Grid.Row="21"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="IVA:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="21"
+                />
+
+            <TextBlock
+                Grid.Row="23"
+                Grid.Column="1"
+                Foreground="Aqua"
+                FontSize="14"
+                FontFamily="Monserrat"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Text="Moneda:" />
+
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="23"
+                />
+
+
+
+
+
+        </Grid>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="80"/>
+
+
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Column="1"
+                Grid.Row="0"
+                BorderThickness="0"
+                Content="GUARDAR COMPANY"
+                Foreground="White"
+                FontSize="12"
+                FontFamily="Monserrat"
+                FontStyle="Normal"
+                FontWeight="Bold"
+                Cursor="Hand"
+                HorizontalAlignment="Center"
+                Margin="0,5,0,0"
+                Height="30"
+                Width="140"
+                >
+                <Button.Style >
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#1C90ED"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#23A8F2"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            CornerRadius="5"
+                            Background="{TemplateBinding Background}"
+                            >
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <TextBox
+                Foreground="white"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Center"
+                Padding="0,-2,0,0"
+                Background="{x:Null}"
+                Height="14"
+                Grid.Column="3"
+                Grid.Row="1"
+                />
+
+            <Button
+                BorderThickness="0"
+                Content="CODIGO"
+                Foreground="White"
+                FontSize="12"
+                FontFamily="Monserrat"
+                FontStyle="Normal"
+                FontWeight="Bold"
+                Cursor="Hand"
+                Grid.Column="5"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Margin="0,5,0,0"
+                Height="30"
+                Width="70"
+                >
+                <Button.Style >
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#1C90ED"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Orange"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            CornerRadius="5"
+                            Background="{TemplateBinding Background}"
+                            >
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+
+
+    </StackPanel>
 </Page>

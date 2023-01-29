@@ -8,19 +8,17 @@
       Title="Reports" Height="570">
 
     <StackPanel>
-        <Grid Margin="0,0,0,85">
+        <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="5"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition Height="5"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="5"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="400"/>
                 <RowDefinition Height="5"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="5"/>
-
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -34,7 +32,7 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Text="REPORTES"
-                    FontSize="20"
+                    FontSize="18"
                     Foreground="Aqua"
                     HorizontalAlignment="Left"
                     Margin="10,0,0,0"
@@ -153,11 +151,29 @@
 
             </StackPanel>
 
-            <ListView
-                Background="black"
+            <Grid
+
                 Grid.Row="5"
                 Grid.Column="0"
-                />
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <ListView
+                    Background="black"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    />
+            </Grid>
+
+
 
             <StackPanel
                 Grid.Row="7"
@@ -176,14 +192,14 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock
-                        Foreground="White"
+                        Foreground="Aqua"
                         Grid.Row="0"
                         Grid.Column="3"
                         FontSize="30"
                         VerticalAlignment="Center"
                         Text="TOTAL:"/>
                     <TextBlock
-                        Foreground="White"
+                        Foreground="Aqua"
                         Grid.Row="0"
                         Grid.Column="5"
                         FontSize="30"

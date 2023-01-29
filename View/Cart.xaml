@@ -38,7 +38,7 @@
                 <TextBlock
                     Text="FACTURA"
                     Foreground="Aqua"
-                    FontSize="20"
+                    FontSize="18"
                     FontFamily="Monserrat"
                     />
             </StackPanel>
