@@ -447,7 +447,7 @@
                         />
 
                     <Image
-                        Source="/pintures/sum.png"
+                        Source="/pintures/add.png"
                         Cursor="Hand"
                         Height="20"
                         Width="20"
