@@ -32,7 +32,7 @@
                 >
                 <TextBlock
                     Text="CLIENTES"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     VerticalAlignment="Center"
@@ -86,7 +86,7 @@
                                 Source="/pintures/avatar.png" />
                             <TextBlock
                                 Text="AÑADIR CLIENTE"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -145,7 +145,7 @@
 
                             <TextBlock
                                 Text="CI:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -164,7 +164,7 @@
 
                             <TextBlock
                                 Text="Nombre:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -185,7 +185,7 @@
 
                             <TextBlock
                                 Text="Apellido:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -206,7 +206,7 @@
 
                             <TextBlock
                                 Text="Direccion:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -227,7 +227,7 @@
 
                             <TextBlock
                                 Text="Email:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -248,7 +248,7 @@
 
                             <TextBlock
                                 Text="Phone:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -269,7 +269,7 @@
 
                             <TextBlock
                                 Text="Ciudad:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"

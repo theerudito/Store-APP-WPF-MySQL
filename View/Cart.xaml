@@ -37,7 +37,7 @@
                 Background="Black">
                 <TextBlock
                     Text="FACTURA"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="20"
                     FontFamily="Monserrat"
                     />
@@ -70,7 +70,7 @@
 
                     <TextBlock
                         Text="Fecha:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="3"
@@ -81,7 +81,7 @@
 
                     <TextBlock
                         Text="27/01/2023"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         HorizontalAlignment="Center"
@@ -92,7 +92,7 @@
 
                     <TextBlock
                         Text="Hora:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="3"
@@ -103,7 +103,7 @@
 
                     <TextBlock
                         Text="11:50"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="3"
@@ -114,7 +114,7 @@
 
                     <TextBlock
                         Text="CI:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="3"
@@ -167,7 +167,7 @@
 
                     <TextBlock
                         Text="Nombre:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -188,7 +188,7 @@
 
                     <TextBlock
                         Text="Apellido:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -232,7 +232,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Text="Direccion:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -251,7 +251,7 @@
                         />
                     <TextBlock
                         Text="Email:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -270,7 +270,7 @@
                         />
                     <TextBlock
                         Text="Phone:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -328,7 +328,7 @@
 
                     <TextBlock
                         Text="COD:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -348,7 +348,7 @@
 
                     <TextBlock
                         Text="DETALLE:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -368,7 +368,7 @@
 
                     <TextBlock
                         Text="CANT:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -388,7 +388,7 @@
 
                     <TextBlock
                         Text="DESC:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -409,7 +409,7 @@
 
                     <TextBlock
                         Text="P_UNITARY:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -428,7 +428,7 @@
                         />
                     <TextBlock
                         Text="P_TOTAL:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Row="0"
@@ -510,7 +510,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Text="SUBTOTAL:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="1"
@@ -519,7 +519,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="2"
@@ -529,7 +529,7 @@
 
                     <TextBlock
                         Text="SUBTOTAL0:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         HorizontalAlignment="Left"
@@ -538,7 +538,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="2"
@@ -548,7 +548,7 @@
 
                     <TextBlock
                         Text="SUBTOTAL12:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="1"
@@ -557,7 +557,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         HorizontalAlignment="Right"
@@ -566,7 +566,7 @@
                         />
                     <TextBlock
                         Text="DESCUENTO:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         HorizontalAlignment="Left"
@@ -575,7 +575,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         HorizontalAlignment="Right"
@@ -585,7 +585,7 @@
 
                     <TextBlock
                         Text="IVA:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="1"
@@ -594,7 +594,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="2"
@@ -603,7 +603,7 @@
                         />
                     <TextBlock
                         Text="TOTAL:"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="1"
@@ -612,7 +612,7 @@
                         />
                     <TextBlock
                         Text="18:25"
-                        Foreground="Aquamarine"
+                        Foreground="Aqua"
                         FontSize="14"
                         FontFamily="Monserrat"
                         Grid.Column="2"

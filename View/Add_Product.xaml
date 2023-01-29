@@ -34,7 +34,7 @@
                 >
                 <TextBlock
                     Text="PRODUCTOS"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     VerticalAlignment="Center"
@@ -88,7 +88,7 @@
                                 Source="/pintures/avatar.png" />
                             <TextBlock
                                 Text="AÑADIR PRODUCTOS"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -146,7 +146,7 @@
 
                             <TextBlock
                                 Text="Codigo:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -165,7 +165,7 @@
 
                             <TextBlock
                                 Text="Nombre:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -186,7 +186,7 @@
 
                             <TextBlock
                                 Text="Marca:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -207,7 +207,7 @@
 
                             <TextBlock
                                 Text="Descripcion:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -216,7 +216,7 @@
                                 />
                             <TextBox
                                 Margin="8,0,8,0"
-                                Foreground="white"
+                                Foreground="Aqua"
                                 BorderThickness="0,0,0,1"
                                 VerticalAlignment="Center"
                                 Padding="0,-2,0,0"
@@ -228,7 +228,7 @@
 
                             <TextBlock
                                 Text="Cantidad:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"
@@ -237,7 +237,7 @@
                                 />
                             <TextBox
                                 Margin="8,0,8,0"
-                                Foreground="white"
+                                Foreground="Aqua"
                                 BorderThickness="0,0,0,1"
                                 VerticalAlignment="Center"
                                 Padding="0,-2,0,0"
@@ -249,7 +249,7 @@
 
                             <TextBlock
                                 Text="P_Unitario:"
-                                Foreground="Aquamarine"
+                                Foreground="Aqua"
                                 FontSize="14"
                                 FontFamily="Monserrat"
                                 Margin="10,2,10,2"

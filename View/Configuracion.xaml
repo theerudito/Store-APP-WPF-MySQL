@@ -34,7 +34,7 @@
             Grid.Row="1"
             Background="black">
             <TextBlock
-                Foreground="Aquamarine"
+                Foreground="Aqua"
                 FontSize="20"
                 FontFamily="Monserrat"
                 HorizontalAlignment="Left"
@@ -66,7 +66,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="1"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -87,7 +87,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="5"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -108,7 +108,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="9"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -152,7 +152,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="1"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -173,7 +173,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="5"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -194,7 +194,7 @@
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="9"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -238,7 +238,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock
                     Grid.Column="1"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -257,7 +257,7 @@
 
                 <TextBlock
                     Grid.Column="6"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Center"
@@ -276,7 +276,7 @@
 
                 <TextBlock
                     Grid.Column="10"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Center"
@@ -322,7 +322,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock
                     Grid.Column="1"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Left"
@@ -341,7 +341,7 @@
 
                 <TextBlock
                     Grid.Column="5"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Center"
@@ -360,7 +360,7 @@
 
                 <TextBlock
                     Grid.Column="9"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Center"
@@ -379,7 +379,7 @@
 
                 <TextBlock
                     Grid.Column="13"
-                    Foreground="Aquamarine"
+                    Foreground="Aqua"
                     FontSize="14"
                     FontFamily="Monserrat"
                     HorizontalAlignment="Center"
