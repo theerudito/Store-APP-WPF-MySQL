@@ -8,10 +8,7 @@
       Background="Transparent"
       d:DesignHeight="500" d:DesignWidth="600"
       Title="Add_Product">
-
-
     <StackPanel Background="Transparent" Margin="10,0,10,10" >
-
         <Grid >
             <Grid.RowDefinitions >
                 <RowDefinition Height="5"/>
@@ -25,8 +22,6 @@
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-
             <StackPanel
                 Grid.Row="1"
                 Grid.Column="0"
@@ -39,11 +34,8 @@
                     FontFamily="Monserrat"
                     VerticalAlignment="Center"
                     Margin="5,2,0,0"
-
                     />
             </StackPanel>
-
-
             <Grid
                 Grid.Row="3"
                 Grid.Column="0"
@@ -62,7 +54,6 @@
                     Grid.Row="0"
                     Grid.Column="0"
                     >
-
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -97,10 +88,8 @@
                                 VerticalAlignment="Center"
                                 />
                         </Grid>
-
                     </StackPanel>
                 </Grid>
-
                 <Grid
                     Grid.Row="5"
                     Grid.Column="0"
@@ -114,7 +103,6 @@
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-
                     <StackPanel
                         Margin="0,0,0,0"
                         Grid.Column="0"
@@ -134,7 +122,6 @@
                                 <RowDefinition Height="10"/>
                                 <RowDefinition Height="20"/>
                                 <RowDefinition Height="10"/>
-
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="5"/>
@@ -143,7 +130,6 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
-
                             <TextBlock
                                 Text="Codigo:"
                                 Foreground="Aqua"
@@ -161,8 +147,8 @@
                                 Grid.Column="3"
                                 Background="{x:Null}"
                                 Height="14"
+                                Text="{Binding CodeProduct, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Nombre:"
                                 Foreground="Aqua"
@@ -182,8 +168,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="2"
+                                Text="{Binding NameProduct, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Marca:"
                                 Foreground="Aqua"
@@ -203,8 +189,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="4"
+                                Text="{Binding Brand, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Descripcion:"
                                 Foreground="Aqua"
@@ -216,7 +202,7 @@
                                 />
                             <TextBox
                                 Margin="8,0,8,0"
-                                Foreground="Aqua"
+                                Foreground="white"
                                 BorderThickness="0,0,0,1"
                                 VerticalAlignment="Center"
                                 Padding="0,-2,0,0"
@@ -224,6 +210,7 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="6"
+                                Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
                                 />
 
                             <TextBlock
@@ -237,7 +224,7 @@
                                 />
                             <TextBox
                                 Margin="8,0,8,0"
-                                Foreground="Aqua"
+                                Foreground="white"
                                 BorderThickness="0,0,0,1"
                                 VerticalAlignment="Center"
                                 Padding="0,-2,0,0"
@@ -245,6 +232,7 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="8"
+                                Text="{Binding Quantity, UpdateSourceTrigger=PropertyChanged}"
                                 />
 
                             <TextBlock
@@ -266,12 +254,10 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="10"
+                                Text="{Binding P_Unitary, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                         </Grid>
-
                     </StackPanel>
-
                     <StackPanel
                         Margin="0,0,0,0"
                         Grid.Column="0"
@@ -290,7 +276,6 @@
                                 <ColumnDefinition Width="70"/>
                                 <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
-
                             <Button
                                 BorderThickness="0"
                                 Content="GUARDAR"
@@ -302,6 +287,7 @@
                                 Cursor="Hand"
                                 Grid.Column="1"
                                 Grid.Row="1"
+                                Command="{Binding btnCreateNewProductCommand}"
                                 >
                                 <Button.Style >
                                     <Style TargetType="Button">
@@ -329,7 +315,6 @@
                                 </Button.Template>
 
                             </Button>
-
                             <Button
                                 BorderThickness="0"
                                 Content="ACTUALIZAR"
@@ -341,6 +326,7 @@
                                 Cursor="Hand"
                                 Grid.Column="3"
                                 Grid.Row="1"
+                                Command="{Binding btnUpdateProductCommand}"
                                 >
                                 <Button.Style >
                                     <Style TargetType="Button">
@@ -368,7 +354,6 @@
                                 </Button.Template>
 
                             </Button>
-
                             <Button
                                 BorderThickness="0"
                                 Content="ELIMINAR"
@@ -380,6 +365,7 @@
                                 Cursor="Hand"
                                 Grid.Column="5"
                                 Grid.Row="1"
+                                Command="{Binding btnDeleteProductCommand}"
                                 >
                                 <Button.Style >
                                     <Style TargetType="Button">
@@ -408,14 +394,9 @@
 
                             </Button>
                         </Grid>
-
                     </StackPanel>
-
                 </Grid>
-
             </Grid>
-
-
             <Grid
                 Grid.Row="3"
                 Grid.Column="2"
@@ -457,7 +438,6 @@
                             Grid.Row="2"
                             HorizontalAlignment="Center"
                             />
-
                         <TextBox
                             Margin="8,-2,8,0"
                             Foreground="white"
@@ -468,7 +448,6 @@
                             Grid.Row="1"
                             Background="{x:Null}" Height="15"
                             RenderTransformOrigin="0.5,0.5"
-
                             >
                             <TextBox.RenderTransform>
                                 <TransformGroup>
@@ -479,7 +458,6 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-
                         <Image
                             Source="/pintures/lupa.png"
                             Cursor="Hand"
@@ -489,7 +467,8 @@
                             >
                         </Image>
                     </Grid>
-                    <ListView
+                    <DataGrid
+                        ItemsSource="{Binding List_Products}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Background="black"
@@ -498,5 +477,4 @@
             </Grid>
         </Grid>
     </StackPanel>
-
 </Page>

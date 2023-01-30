@@ -1,9 +1,8 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using Store.View;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Navigation;
+
 
 namespace Store.ViewModels
 {

@@ -4,12 +4,11 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Store.View"
+      xmlns:viewmodel="clr-namespace:Store.ViewModels"
       mc:Ignorable="d"
       d:DesignHeight="500" d:DesignWidth="600"
       Title="Add_Client">
-
     <StackPanel Background="Transparent" Margin="10,0,10,10" >
-
         <Grid >
             <Grid.RowDefinitions >
                 <RowDefinition Height="5"/>
@@ -23,8 +22,6 @@
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-
             <StackPanel
                 Grid.Row="1"
                 Grid.Column="0"
@@ -37,11 +34,8 @@
                     FontFamily="Monserrat"
                     VerticalAlignment="Center"
                     Margin="5,0,0,0"
-
                     />
             </StackPanel>
-
-
             <Grid
                 Grid.Row="3"
                 Grid.Column="0"
@@ -55,12 +49,9 @@
                     <ColumnDefinition Width="250"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
                 <Grid
                     Grid.Row="0"
-                    Grid.Column="0"
-                    >
-
+                    Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -95,14 +86,11 @@
                                 VerticalAlignment="Center"
                                 />
                         </Grid>
-
                     </StackPanel>
                 </Grid>
-
                 <Grid
                     Grid.Row="5"
-                    Grid.Column="0"
-                    >
+                    Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="5"/>
@@ -112,12 +100,10 @@
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-
                     <StackPanel
                         Margin="0,0,0,0"
                         Grid.Column="0"
-                        Grid.Row="0"
-                        >
+                        Grid.Row="0">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"/>
@@ -142,7 +128,6 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
-
                             <TextBlock
                                 Text="CI:"
                                 Foreground="Aqua"
@@ -160,8 +145,8 @@
                                 Grid.Column="3"
                                 Background="{x:Null}"
                                 Height="14"
+                                Text="{Binding DNI, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Nombre:"
                                 Foreground="Aqua"
@@ -181,8 +166,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="2"
+                                Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Apellido:"
                                 Foreground="Aqua"
@@ -202,8 +187,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="4"
+                                Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Direccion:"
                                 Foreground="Aqua"
@@ -223,8 +208,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="6"
+                                Text="{Binding Direction, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Email:"
                                 Foreground="Aqua"
@@ -244,8 +229,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="8"
+                                Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Phone:"
                                 Foreground="Aqua"
@@ -265,8 +250,8 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="10"
+                                Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
                                 />
-
                             <TextBlock
                                 Text="Ciudad:"
                                 Foreground="Aqua"
@@ -286,16 +271,14 @@
                                 Height="14"
                                 Grid.Column="3"
                                 Grid.Row="12"
+                                Text="{Binding City, UpdateSourceTrigger=PropertyChanged}"
                                 />
                         </Grid>
-
                     </StackPanel>
-
                     <StackPanel
                         Margin="0,0,0,0"
                         Grid.Column="0"
-                        Grid.Row="5"
-                        >
+                        Grid.Row="5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"/>
@@ -309,7 +292,6 @@
                                 <ColumnDefinition Width="70"/>
                                 <ColumnDefinition Width="5"/>
                             </Grid.ColumnDefinitions>
-
                             <Button
                                 BorderThickness="0"
                                 Content="GUARDAR"
@@ -321,7 +303,7 @@
                                 Cursor="Hand"
                                 Grid.Column="1"
                                 Grid.Row="1"
-                                >
+                                Command="{Binding btnCreateNewClientCommand}" CommandParameter="*">
                                 <Button.Style >
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#2255DB"/>
@@ -332,13 +314,11 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Button.Style>
-
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border
                                             CornerRadius="5"
-                                            Background="{TemplateBinding Background}"
-                                            >
+                                            Background="{TemplateBinding Background}">
                                             <ContentPresenter
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
@@ -346,9 +326,7 @@
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
-
                             </Button>
-
                             <Button
                                 BorderThickness="0"
                                 Content="ACTUALIZAR"
@@ -360,7 +338,7 @@
                                 Cursor="Hand"
                                 Grid.Column="3"
                                 Grid.Row="1"
-                                >
+                                Command="{Binding btnUpdateClientCommand}" CommandParameter="*">
                                 <Button.Style >
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="OrangeRed"/>
@@ -371,13 +349,11 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Button.Style>
-
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border
                                             CornerRadius="5"
-                                            Background="{TemplateBinding Background}"
-                                            >
+                                            Background="{TemplateBinding Background}">
                                             <ContentPresenter
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
@@ -385,9 +361,7 @@
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
-
                             </Button>
-
                             <Button
                                 BorderThickness="0"
                                 Content="ELIMINAR"
@@ -399,7 +373,7 @@
                                 Cursor="Hand"
                                 Grid.Column="5"
                                 Grid.Row="1"
-                                >
+                                Command="{Binding btnDeleteClientCommand}" CommandParameter="*" >
                                 <Button.Style >
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#FF110B"/>
@@ -410,13 +384,11 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Button.Style>
-
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border
                                             CornerRadius="5"
-                                            Background="{TemplateBinding Background}"
-                                            >
+                                            Background="{TemplateBinding Background}">
                                             <ContentPresenter
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
@@ -424,17 +396,11 @@
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
-
                             </Button>
                         </Grid>
-
                     </StackPanel>
-
                 </Grid>
-
             </Grid>
-
-
             <Grid
                 Grid.Row="3"
                 Grid.Column="2"
@@ -476,7 +442,6 @@
                             Grid.Row="2"
                             HorizontalAlignment="Center"
                             />
-
                         <TextBox
                             Margin="8,-2,8,0"
                             Foreground="white"
@@ -486,9 +451,7 @@
                             Grid.Column="3"
                             Grid.Row="1"
                             Background="{x:Null}" Height="15"
-                            RenderTransformOrigin="0.5,0.5"
-
-                            >
+                            RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleY="1"/>
@@ -498,7 +461,6 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-
                         <Image
                             Source="/pintures/lupa.png"
                             Cursor="Hand"
@@ -508,7 +470,8 @@
                             >
                         </Image>
                     </Grid>
-                    <ListView
+                    <DataGrid
+                        ItemsSource="{Binding List_Clients}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Background="black"

@@ -112,7 +112,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelCommand.cs" />
+    <Compile Include="ViewModels\VMClients.cs" />
     <Compile Include="ViewModels\VMPageHome.cs" />
+    <Compile Include="ViewModels\VMProducts.cs" />
     <Compile Include="View\Add_Client.xaml.cs">
       <DependentUpon>Add_Client.xaml</DependentUpon>
     </Compile>
@@ -131,14 +134,8 @@
     <Compile Include="View\DetailsCart.xaml.cs">
       <DependentUpon>DetailsCart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\PageHome.xaml.cs">
       <DependentUpon>PageHome.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -172,15 +169,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\PageHome.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

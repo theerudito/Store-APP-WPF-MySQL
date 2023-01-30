@@ -3,34 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Store.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged, INotifyPropertyChanging
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        public event PropertyChangingEventHandler PropertyChanging;
 
-        private string name;
-        public string Name
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
-            get { return name; }
-            set
+            if (PropertyChanged != null)
             {
-                name = value;
-                NotifyPropertyChanged("Name");
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
-        private string greeting;
-        public string Greeting
+        protected void OnPropertyChanging([CallerMemberName] string propertyName = "")
         {
-            get { return greeting; }
-            set
-            {
-                greeting = value;
-                NotifyPropertyChanged("Greeting");
-            }
+            PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
         }
+
     }
 }
