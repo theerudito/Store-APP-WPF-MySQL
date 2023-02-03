@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Store.Models
 {
     public class MClient
     {
+        [Key]
         public int IdClient { get; set; }
         public string DNI { get; set; } = "";
         public string FirstName { get; set; } = "";
@@ -14,5 +17,6 @@ namespace Store.Models
         public string City { get; set; } = "";
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public List<MCart> Cart { get; set; } = new List<MCart>();
     }
 }

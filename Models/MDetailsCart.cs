@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Store.Models
 {
     public class MDetailsCart
     {
+        [Key]
         public int IdDetailCart { get; set; }
         public int IdCart { get; set; }
         public string Date_Now { get; set; } = "";
@@ -15,5 +17,6 @@ namespace Store.Models
         public float Total { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public MCart Cart { get; set; }
     }
 }

@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Windows.Documents;
 
 namespace Store.Models
 {
     public class MProduct
     {
+        [Key]
         public int IdProduct { get; set; }
         public string NameProduct { get; set; } = "";
         public string CodeProduct { get; set; } = "";
@@ -15,5 +19,6 @@ namespace Store.Models
         public string Image_Product { get; set; } = "";
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public List<MCart> Cart { get; set; } = new List<MCart>();
     }
 }
