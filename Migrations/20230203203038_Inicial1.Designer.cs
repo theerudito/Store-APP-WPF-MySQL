@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Store.DB_Context;
 
 namespace Store.Migrations
 {
     [DbContext(typeof(Application_DBContext))]
-    partial class Application_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20230203203038_Inicial1")]
+    partial class Inicial1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,7 +200,7 @@ namespace Store.Migrations
 
                     b.HasKey("IdProduct");
 
-                    b.ToTable("Products");
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("Store.Models.MCart", b =>

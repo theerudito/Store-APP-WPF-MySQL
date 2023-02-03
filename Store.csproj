@@ -181,6 +181,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Configuration\MDetailCartConfig.cs" />
     <Compile Include="Configuration\MCartConfig.cs" />
     <Compile Include="Configuration\MClientConfig.cs" />
     <Compile Include="Configuration\MProductConfig.cs" />
@@ -188,6 +189,14 @@
     <Compile Include="Migrations\20230203200355_Inicial.cs" />
     <Compile Include="Migrations\20230203200355_Inicial.designer.cs">
       <DependentUpon>20230203200355_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230203203038_Inicial1.cs" />
+    <Compile Include="Migrations\20230203203038_Inicial1.designer.cs">
+      <DependentUpon>20230203203038_Inicial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230203203352_Inicial2.cs" />
+    <Compile Include="Migrations\20230203203352_Inicial2.designer.cs">
+      <DependentUpon>20230203203352_Inicial2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Application_DBContextModelSnapshot.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />

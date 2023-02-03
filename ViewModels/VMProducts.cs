@@ -1,9 +1,11 @@
 ﻿using Dapper;
 using GalaSoft.MvvmLight.Command;
 using Store.DataBase;
+using Store.DB_Context;
 using Store.Models;
 using System.Collections.ObjectModel;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -30,7 +32,7 @@ namespace Store.ViewModels
         private int _Quantity;
         private float _P_Unitary;
         private float _P_Total;
-        private string _Image_Product;
+        private string _Image_Product = "png";
         #endregion
 
         #region OBJETOS
@@ -80,30 +82,35 @@ namespace Store.ViewModels
         #region METHODS
         public void ShowProducts()
         {
-            var db = connection.openConnection();
-            var getAllProducts = "SELECT * FROM MProduct";
-            var result = db.Query<MProduct>(getAllProducts);
-            List_Products = new ObservableCollection<MProduct>(result);
+            Application_DBContext context = new Application_DBContext();
 
+            List_Products = new ObservableCollection<MProduct>(context.Products);
         }
-        public void SaveProduct()
+        public async Task SaveProduct()
         {
-            var db = connection.openConnection();
+            Application_DBContext context = new Application_DBContext();
 
-            var addProduct = "INSERT INTO MProduct (NameProduct, CodeProduct, Brand, Description, Quantity, P_Unitary, Image_Product) " +
-            "VALUES ('" + NameProduct + "', '" + CodeProduct + "', '" + Brand + "', '" + Description + "', '" + Quantity + "', '" + P_Unitary + "', '" + Image_Product + "')";
-
-            db.Execute(addProduct);
-
-            if (addProduct != null)
+            context.Add(new MProduct
             {
+                NameProduct = NameProduct,
+                CodeProduct = CodeProduct,
+                Brand = Brand,
+                Description = Description,
+                Quantity = Quantity,
+                P_Unitary = P_Unitary,
+                P_Total = P_Total,
+                Image_Product = Image_Product
+            });
+
+            if (await context.SaveChangesAsync() > 0)
+            {
+
+                MessageBox.Show("Producto guardado correctamente");
                 ResetInput();
-                ShowProducts();
-                MessageBox.Show("producto agregado correctamente");
             }
             else
             {
-                MessageBox.Show("Error al agregar producto");
+                MessageBox.Show("Error al guardar el producto");
             }
         }
         public void DeleteClient()
@@ -185,7 +192,7 @@ namespace Store.ViewModels
             {
                 if (_btnCreateNewProductCommand == null)
                 {
-                    _btnCreateNewProductCommand = new RelayCommand(SaveProduct);
+                    _btnCreateNewProductCommand = new RelayCommand(async () => await SaveProduct());
                 }
                 return _btnCreateNewProductCommand;
             }

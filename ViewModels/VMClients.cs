@@ -1,8 +1,11 @@
 ﻿using Dapper;
 using GalaSoft.MvvmLight.Command;
 using Store.DataBase;
+using Store.DB_Context;
 using Store.Models;
 using System.Collections.ObjectModel;
+using System.Runtime.Remoting.Contexts;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -76,42 +79,36 @@ namespace Store.ViewModels
         #region METHODS
         public void ShowClients()
         {
-            var db = connection.openConnection();
-            var getAllClient = "SELECT IdClient, DNI, FirstName, LastName, Direction, Email, Phone, City FROM MClient";
-            var result = db.Query<MClient>(getAllClient);
-            List_Clients = new ObservableCollection<MClient>(result);
+            Application_DBContext context = new Application_DBContext();
+            List_Clients = new ObservableCollection<MClient>(context.Clients);
 
         }
-        public void SaveClient()
+        public async Task SaveClient()
         {
-            var db = connection.openConnection();
+            Application_DBContext context = new Application_DBContext();
 
-            //var addClient = db.Insert("clients", new
-            //{
-            //    DNI = DNI,
-            //    FirstName = FirstName,
-            //    LastName = LastName,
-            //    Direction = Direction,
-            //    Phone = Phone,
-            //    Email = Email,
-            //    City = City
-            //});
-
-            var addClient = "INSERT INTO MClient (DNI, FirstName, LastName, Direction, Phone, Email, City) " +
-                "VALUES ('" + DNI + "', '" + FirstName + "', '" + LastName + "', '" + Direction + "', '" + Phone + "', '" + Email + "', '" + City + "')";
-
-            db.Execute(addClient);
-
-            if (addClient != null)
+            context.Add(new MClient
             {
+                DNI = DNI,
+                FirstName = FirstName,
+                LastName = LastName,
+                Direction = Direction,
+                Email = Email,
+                Phone = Phone,
+                City = City
+            });
+
+            if (await context.SaveChangesAsync() > 0)
+            {
+                MessageBox.Show("Cliente guardado correctamente");
                 ResetInput();
                 ShowClients();
-                MessageBox.Show("Cliente agregado correctamente");
             }
             else
             {
-                MessageBox.Show("Error al agregar cliente");
+                MessageBox.Show("Error al guardar el cliente");
             }
+            ShowClients();
         }
         public void DeleteClient()
         {
@@ -185,7 +182,7 @@ namespace Store.ViewModels
             {
                 if (_btnCreateNewClientCommand == null)
                 {
-                    _btnCreateNewClientCommand = new RelayCommand(SaveClient);
+                    _btnCreateNewClientCommand = new RelayCommand(async () => await SaveClient());
                 }
                 return _btnCreateNewClientCommand;
             }
