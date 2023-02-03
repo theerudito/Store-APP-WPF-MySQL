@@ -15,6 +15,7 @@ namespace Store.ViewModels
     public class VMClients : BaseViewModel
     {
         MySQLConnection connection = new MySQLConnection();
+        private readonly Application_DBContext context = new Application_DBContext();
 
         #region CONSTRUCTOR
         public VMClients()
@@ -79,14 +80,11 @@ namespace Store.ViewModels
         #region METHODS
         public void ShowClients()
         {
-            Application_DBContext context = new Application_DBContext();
             List_Clients = new ObservableCollection<MClient>(context.Clients);
 
         }
         public async Task SaveClient()
         {
-            Application_DBContext context = new Application_DBContext();
-
             context.Add(new MClient
             {
                 DNI = DNI,
