@@ -8,12 +8,10 @@ namespace Store.DB_Context
     {
 
         protected static string _connectionString = "server=localhost;port=3306;user=root;password=erudito;database=WPFStore;";
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(_connectionString);
@@ -22,5 +20,6 @@ namespace Store.DB_Context
         public DbSet<MClient> Clients { get; set; }
         public DbSet<MCart> Cart { get; set; }
         public DbSet<MDetailsCart> DetailsCart { get; set; }
+        public DbSet<MCompany> Company { get; set; }
     }
 }

@@ -198,10 +198,16 @@
     <Compile Include="Migrations\20230203203352_Inicial2.designer.cs">
       <DependentUpon>20230203203352_Inicial2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230207210950_Inicial5.cs" />
+    <Compile Include="Migrations\20230207210950_Inicial5.designer.cs">
+      <DependentUpon>20230207210950_Inicial5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Application_DBContextModelSnapshot.cs" />
+    <Compile Include="Models\MCompany.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ViewModelCommand.cs" />
     <Compile Include="ViewModels\VMClients.cs" />
+    <Compile Include="ViewModels\VMConfiguration.cs" />
     <Compile Include="ViewModels\VMPageHome.cs" />
     <Compile Include="ViewModels\VMProducts.cs" />
     <Compile Include="View\Add_Client.xaml.cs">

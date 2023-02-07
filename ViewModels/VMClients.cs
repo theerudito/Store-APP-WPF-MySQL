@@ -1,20 +1,17 @@
-﻿using Dapper;
-using GalaSoft.MvvmLight.Command;
+﻿using GalaSoft.MvvmLight.Command;
 using Store.DataBase;
 using Store.DB_Context;
 using Store.Models;
+using System;
 using System.Collections.ObjectModel;
-using System.Runtime.Remoting.Contexts;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
 namespace Store.ViewModels
 {
-
     public class VMClients : BaseViewModel
     {
-        MySQLConnection connection = new MySQLConnection();
         private readonly Application_DBContext context = new Application_DBContext();
 
         #region CONSTRUCTOR
@@ -74,14 +71,22 @@ namespace Store.ViewModels
             get { return _City; }
             set { _City = value; OnPropertyChanged(nameof(City)); }
         }
+        public MClient SelectedClient { get; set; }
         #endregion
 
 
         #region METHODS
-        public void ShowClients()
+        public async Task ShowClients()
         {
-            List_Clients = new ObservableCollection<MClient>(context.Clients);
-
+            try
+            {
+                List_Clients = new ObservableCollection<MClient>(context.Clients);
+                OnPropertyChanged(nameof(List_Clients));
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public async Task SaveClient()
         {
@@ -100,17 +105,26 @@ namespace Store.ViewModels
             {
                 MessageBox.Show("Cliente guardado correctamente");
                 ResetInput();
-                ShowClients();
+                await ShowClients();
             }
             else
             {
                 MessageBox.Show("Error al guardar el cliente");
             }
-            ShowClients();
+            await ShowClients();
         }
-        public void DeleteClient()
+        public async void DeleteClient()
         {
-            MessageBox.Show("Eliminar");
+            try
+            {
+                var id = SelectedClient.IdClient;
+                MessageBox.Show(id.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         public void UpdateClient()
         {
@@ -174,6 +188,8 @@ namespace Store.ViewModels
 
         #region COMMANDS
         private ICommand _btnCreateNewClientCommand;
+        private ICommand _btnDeleteClientCommand;
+        private ICommand _btnUpdateClientCommand;
         public ICommand btnCreateNewClientCommand
         {
             get
@@ -185,7 +201,6 @@ namespace Store.ViewModels
                 return _btnCreateNewClientCommand;
             }
         }
-        private ICommand _btnDeleteClientCommand;
         public ICommand btnDeleteClientCommand
         {
             get
@@ -197,7 +212,6 @@ namespace Store.ViewModels
                 return _btnDeleteClientCommand;
             }
         }
-        private ICommand _btnUpdateClientCommand;
         public ICommand btnUpdateClientCommand
         {
             get

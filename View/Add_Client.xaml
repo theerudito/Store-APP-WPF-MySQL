@@ -470,12 +470,145 @@
                             >
                         </Image>
                     </Grid>
-                    <DataGrid
-                        ItemsSource="{Binding List_Clients}"
-                        Grid.Row="4"
-                        Grid.Column="1"
-                        Background="black"
-                        />
+                    <!--<ListView
+                    ItemsSource="{Binding List_Clients}"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Background="black"
+                    BorderBrush="Aqua"
+                    SelectedItem="{Binding ElementName=SelectedClient, Path=SelectedClient}"
+                    >
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <Grid>
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Row="0"
+                    Margin="5,0,0,0"
+                    Grid.Column="0"
+                    Foreground="white"
+                    Text="{Binding DNI}"/>
+                    <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="5,0,0,0"
+                    Foreground="white"
+                    Text="{Binding FirstName}"/>
+                    <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="5,0,0,0"
+                    Foreground="white"
+                    Text="{Binding LastName}"/>
+                    <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Margin="5,0,0,0"
+                    Foreground="white"
+                    Text="{Binding Direction}"/>
+                    <TextBlock
+                    Margin="5,0,0,0"
+                    Grid.Row="0"
+                    Grid.Column="4"
+                    Foreground="white"
+                    Text="{Binding Phone}"/>
+                    <TextBlock
+                    Grid.Row="0"
+                    Margin="5,0,0,0"
+                    Grid.Column="5"
+                    Foreground="white"
+                    Text="{Binding Email}"/>
+                    <TextBlock
+                    Margin="5,0,0,0"
+                    Grid.Row="0"
+                    Grid.Column="6"
+                    Foreground="white"
+                    Text="{Binding City}"/>
+                    </Grid>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                    </ListView>-->
+
+
+                    <ListView ItemsSource="{Binding List_Clients}"
+                              Grid.Row="4"
+                              Grid.Column="1"
+                              Background="black"
+
+                              BorderBrush="Aqua">
+                        <ListView.View>
+
+                            <GridView AllowsColumnReorder="true"
+                                      ColumnHeaderToolTip="Employee Information">
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=DNI}"
+
+
+                                                Header="CI" Width="100"/>
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=FirstName}"
+                                                Header="First Name" Width="100"/>
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=LastName}"
+                                                Width="100">
+                                    <GridViewColumnHeader>Last Name
+                                        <GridViewColumnHeader.ContextMenu>
+                                            <ContextMenu
+                                                Name="LastNameCM">
+                                                <MenuItem Header="Ascending" />
+                                                <MenuItem Header="Descending" />
+                                            </ContextMenu>
+                                        </GridViewColumnHeader.ContextMenu>
+                                    </GridViewColumnHeader>
+                                </GridViewColumn>
+
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=Direction}"
+                                                Header="Direction" Width="100"/>
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=Email}"
+                                                Header="Email"  Width="100"/>
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=Phone}"
+                                                Header="Phone" Width="100"/>
+
+                                <GridViewColumn DisplayMemberBinding=
+                                                "{Binding Path=City}"
+                                                Header="City" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Style.Triggers>
+                                    <Trigger Property="ItemsControl.AlternationIndex"  Value="0">
+                                        <Setter Property="Background" Value="black" />
+                                        <Setter Property="Foreground" Value="white" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+
+
+
                 </Grid>
             </Grid>
         </Grid>

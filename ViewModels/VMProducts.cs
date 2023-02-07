@@ -11,9 +11,10 @@ using System.Windows.Input;
 
 namespace Store.ViewModels
 {
-    public class VMProducts
+    public class VMProducts : BaseViewModel
     {
         MySQLConnection connection = new MySQLConnection();
+        private readonly Application_DBContext context = new Application_DBContext();
 
 
         #region CONSTRUCTOR
@@ -80,11 +81,17 @@ namespace Store.ViewModels
         #endregion
 
         #region METHODS
-        public void ShowProducts()
+        public async Task ShowProducts()
         {
-            Application_DBContext context = new Application_DBContext();
-
-            List_Products = new ObservableCollection<MProduct>(context.Products);
+            try
+            {
+                List_Products = new ObservableCollection<MProduct>(context.Products);
+                OnPropertyChanged(nameof(List_Products));
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public async Task SaveProduct()
         {
@@ -107,15 +114,18 @@ namespace Store.ViewModels
 
                 MessageBox.Show("Producto guardado correctamente");
                 ResetInput();
+                await ShowProducts();
             }
             else
             {
                 MessageBox.Show("Error al guardar el producto");
             }
+            await ShowProducts();
         }
         public void DeleteClient()
         {
-            MessageBox.Show("Eliminar");
+            // eliminar el cliente
+
         }
         public void UpdateClient()
         {
